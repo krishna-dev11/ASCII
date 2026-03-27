@@ -22,10 +22,9 @@ const port=process.env.PORT || 5000
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:"http://localhost:5173",
+    // origin:"http://localhost:5173",
+    origin:"https://ascii-ten-nu.vercel.app",
     credentials:true
-    // origin:"https://ascii-ten-nu.vercel.app",
-
 }))
 app.use("/api/auth",authRouter)
 app.use("/api/user",userRouter)
